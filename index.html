@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Laboratorios virtuales de procesos de manufactura</title>
+<meta name="description" content="Portal de laboratorios virtuales: conformado de metales y procesado de polímeros.">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#1b2430;--mut:#5b6675;--line:#dfe3e8;--acc:#1f5fa8;--m:#b4531a;--p:#1f7a5a}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#12161c;--card:#1a2029;--ink:#e8ecf1;--mut:#9aa6b5;--line:#2c3541;--acc:#6aa7ea;--m:#e08a54;--p:#52c29a}}
+:root[data-theme=dark]{--bg:#12161c;--card:#1a2029;--ink:#e8ecf1;--mut:#9aa6b5;--line:#2c3541;--acc:#6aa7ea;--m:#e08a54;--p:#52c29a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:1000px;margin:0 auto;padding:0 16px}
+header{padding:40px 0 20px}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+h1{font-size:clamp(1.6rem,4vw,2.3rem);line-height:1.15;margin:0 0 8px}
+header p{color:var(--mut);margin:0;max-width:60ch}
+button{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;font:inherit}
+h2{font-size:1.15rem;margin:34px 0 12px;display:flex;align-items:center;gap:10px}
+h2:before{content:"";width:10px;height:10px;border-radius:50%;background:var(--c)}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+a.c{display:block;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:10px;padding:16px;color:inherit;text-decoration:none;transition:transform .15s,box-shadow .15s}
+a.c:hover,a.c:focus-visible{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.12);outline:none}
+a.c h3{margin:0 0 6px;font-size:1.05rem}
+a.c p{margin:0 0 10px;color:var(--mut);font-size:.92rem}
+.t{display:flex;flex-wrap:wrap;gap:6px}
+.t span{font-size:.75rem;border:1px solid var(--line);border-radius:99px;padding:1px 9px;color:var(--mut)}
+.go{display:inline-block;margin-top:12px;color:var(--c);font-weight:600;font-size:.9rem}
+.met{--c:var(--m)}.pol{--c:var(--p)}
+.how{margin-top:34px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;color:var(--mut);font-size:.92rem}
+footer{padding:28px 0 40px;color:var(--mut);font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="w">
+<header>
+ <div class="top">
+  <div>
+   <h1>Laboratorios virtuales de procesos de manufactura</h1>
+   <p>Simuladores interactivos con guía didáctica, base de datos de materiales, curvas, resultados e informe. Cada laboratorio funciona en el navegador, sin instalar nada.</p>
+  </div>
+  <button id="th" type="button" aria-label="Cambiar tema">Tema</button>
+ </div>
+</header>
+<main>
+ <h2 class="met" style="--c:var(--m)">Conformado de metales</h2>
+ <div class="g">
+  <a class="c met" href="https://cesarisaza-design.github.io/Conformado-de-lamina/"><h3>Conformado de lámina</h3><p>Corte, doblado, embutición profunda, fuerzas, recuperación elástica y límites de conformado.</p><div class="t"><span>Embutición</span><span>Doblado</span><span>LDR</span></div><span class="go">Abrir laboratorio →</span></a>
+  <a class="c met" href="https://cesarisaza-design.github.io/Lab-laminacion/"><h3>Laminación de metales</h3><p>Reducción, fuerza y torque de laminación, ensanchamiento y perfil de temperatura.</p><div class="t"><span>Fuerza</span><span>Torque</span><span>Reducción</span></div><span class="go">Abrir laboratorio →</span></a>
+  <a class="c met" href="https://cesarisaza-design.github.io/Forjado-de-metales/"><h3>Forjado de metales</h3><p>Flujo plástico, carga de forja, fricción, calentamiento y llenado de matriz.</p><div class="t"><span>Carga</span><span>Fricción</span><span>Matriz</span></div><span class="go">Abrir laboratorio →</span></a>
+  <a class="c met" href="https://cesarisaza-design.github.io/Lab-extrusi-n/"><h3>Extrusión de metales</h3><p>Relación de extrusión, presión del émbolo, flujo del material y defectos.</p><div class="t"><span>Presión</span><span>Flujo</span><span>Defectos</span></div><span class="go">Abrir laboratorio →</span></a>
+  <a class="c met" href="https://cesarisaza-design.github.io/Pulvimetalurgia/"><h3>Metalurgia de polvos</h3><p>Compactación, densidad en verde, sinterización y propiedades finales.</p><div class="t"><span>Compactación</span><span>Sinterizado</span><span>Porosidad</span></div><span class="go">Abrir laboratorio →</span></a>
+ </div>
+
+ <h2 class="pol" style="--c:var(--p)">Procesado de polímeros</h2>
+ <div class="g">
+  <a class="c pol" href="https://cesarisaza-design.github.io/Extrusion-de-polimeros/"><h3>Extrusión de polímeros</h3><p>Tornillo, reología, perfiles de temperatura, microestructura y propiedades del producto.</p><div class="t"><span>Reología</span><span>Tornillo</span><span>Temperaturas</span></div><span class="go">Abrir laboratorio →</span></a>
+  <a class="c pol" href="https://cesarisaza-design.github.io/Laboratorio-de-inyeccion/"><h3>Moldeo por inyección</h3><p>Flujo en el molde, fuerza de cierre, presiones, cojín, dosificación, empaque y contracción.</p><div class="t"><span>Llenado</span><span>Cierre</span><span>Empaque</span></div><span class="go">Abrir laboratorio →</span></a>
+ </div>
+
+ <div class="how">Los modelos son semiempíricos y sirven para entender tendencias y criterios de decisión; no sustituyen el dimensionamiento con datos y normas reales.</div>
+</main>
+<footer>Material didáctico · Manufactura</footer>
+</div>
+<script>
+(function(){var r=document.documentElement,k="portal_theme";
+try{var s=localStorage.getItem(k);if(s)r.setAttribute("data-theme",s)}catch(e){}
+document.getElementById("th").onclick=function(){
+ var d=r.getAttribute("data-theme")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");
+ var n=d==="dark"?"light":"dark";r.setAttribute("data-theme",n);try{localStorage.setItem(k,n)}catch(e){}};})();
+</script>
+</body>
+</html>
