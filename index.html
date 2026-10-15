@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Laboratorios virtuales de procesos de manufactura</title>
+<title>Laboratorios virtuales de procesos de manufactura · Universidad de Antioquia</title>
 <meta name="description" content="Portal de laboratorios virtuales: conformado de metales y procesado de polímeros.">
 <style>
-:root{--bg:#f6f7f9;--card:#fff;--ink:#1b2430;--mut:#5b6675;--line:#dfe3e8;--acc:#1f5fa8;--m:#b4531a;--p:#1f7a5a}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#12161c;--card:#1a2029;--ink:#e8ecf1;--mut:#9aa6b5;--line:#2c3541;--acc:#6aa7ea;--m:#e08a54;--p:#52c29a}}
-:root[data-theme=dark]{--bg:#12161c;--card:#1a2029;--ink:#e8ecf1;--mut:#9aa6b5;--line:#2c3541;--acc:#6aa7ea;--m:#e08a54;--p:#52c29a}
+:root{--bg:#f6f7f9;--card:#fff;--ink:#1b2430;--mut:#5b6675;--line:#dfe3e8;--acc:#1f5fa8;--ud:#0B6B38;--ud2:#08502A;--m:#b4531a;--p:#1f7a5a}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#12161c;--card:#1a2029;--ink:#e8ecf1;--mut:#9aa6b5;--line:#2c3541;--acc:#6aa7ea;--ud:#0B6B38;--ud2:#08502A;--m:#e08a54;--p:#52c29a}}
+:root[data-theme=dark]{--bg:#12161c;--card:#1a2029;--ink:#e8ecf1;--mut:#9aa6b5;--line:#2c3541;--acc:#6aa7ea;--ud:#0B6B38;--ud2:#08502A;--m:#e08a54;--p:#52c29a}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .w{max-width:1000px;margin:0 auto;padding:0 16px}
@@ -30,15 +30,34 @@ a.c p{margin:0 0 10px;color:var(--mut);font-size:.92rem}
 .met{--c:var(--m)}.pol{--c:var(--p)}
 .how{margin-top:34px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;color:var(--mut);font-size:.92rem}
 footer{padding:28px 0 40px;color:var(--mut);font-size:.85rem}
+
+.inst{background:var(--ud);color:#fff;border-bottom:4px solid var(--ud2)}
+.inst .w{display:flex;align-items:center;gap:16px;padding:12px 16px}
+.inst img{height:64px;width:auto;display:block;background:#fff;border-radius:8px;padding:4px}
+.inst .n{line-height:1.25}
+.inst .n b{display:block;font-size:1.25rem;letter-spacing:.01em}
+.inst .n span{display:block;font-size:.92rem;opacity:.92}
+.curso{margin:14px 0 0;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--ud);border-radius:8px;padding:10px 14px;color:var(--ink);font-size:.95rem;max-width:none}
+.curso b{color:var(--ud)}
+:root[data-theme=dark] .curso b{color:#5fd08f}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .curso b{color:#5fd08f}}
+@media (max-width:560px){.inst img{height:48px}.inst .n b{font-size:1.05rem}}
 </style>
 </head>
 <body>
+<div class="inst">
+ <div class="w">
+  <img src="escudo-udea.png" alt="Escudo de la Universidad de Antioquia" onerror="this.style.display='none'">
+  <div class="n"><b>Universidad de Antioquia</b><span>Facultad de Ingeniería · Departamento de Ingeniería Mecánica</span></div>
+ </div>
+</div>
 <div class="w">
 <header>
  <div class="top">
   <div>
    <h1>Laboratorios virtuales de procesos de manufactura</h1>
    <p>Simuladores interactivos con guía didáctica, base de datos de materiales, curvas, resultados e informe. Cada laboratorio funciona en el navegador, sin instalar nada.</p>
+   <p class="curso">Las guías didácticas de cada laboratorio acompañan el curso <b>Conformación</b> del pregrado en <b>Ingeniería Mecánica</b>, Departamento de Ingeniería Mecánica, Universidad de Antioquia.</p>
   </div>
   <button id="th" type="button" aria-label="Cambiar tema">Tema</button>
  </div>
@@ -46,10 +65,10 @@ footer{padding:28px 0 40px;color:var(--mut);font-size:.85rem}
 <main>
  <h2 class="met" style="--c:var(--m)">Conformado de metales</h2>
  <div class="g">
+  <a class="c met" href="https://cesarisaza-design.github.io/Conformado-de-lamina/"><h3>Conformado de lámina</h3><p>Corte, doblado, embutición profunda, fuerzas, recuperación elástica y límites de conformado.</p><div class="t"><span>Embutición</span><span>Doblado</span><span>LDR</span></div><span class="go">Abrir laboratorio →</span></a>
   <a class="c met" href="https://cesarisaza-design.github.io/Lab-laminacion/"><h3>Laminación de metales</h3><p>Reducción, fuerza y torque de laminación, ensanchamiento y perfil de temperatura.</p><div class="t"><span>Fuerza</span><span>Torque</span><span>Reducción</span></div><span class="go">Abrir laboratorio →</span></a>
   <a class="c met" href="https://cesarisaza-design.github.io/Forjado-de-metales/"><h3>Forjado de metales</h3><p>Flujo plástico, carga de forja, fricción, calentamiento y llenado de matriz.</p><div class="t"><span>Carga</span><span>Fricción</span><span>Matriz</span></div><span class="go">Abrir laboratorio →</span></a>
   <a class="c met" href="https://cesarisaza-design.github.io/Lab-extrusi-n/"><h3>Extrusión de metales</h3><p>Relación de extrusión, presión del émbolo, flujo del material y defectos.</p><div class="t"><span>Presión</span><span>Flujo</span><span>Defectos</span></div><span class="go">Abrir laboratorio →</span></a>
-  <a class="c met" href="https://cesarisaza-design.github.io/Conformado-de-lamina/"><h3>Conformado de lámina</h3><p>Corte, doblado, embutición profunda, fuerzas, recuperación elástica y límites de conformado.</p><div class="t"><span>Embutición</span><span>Doblado</span><span>LDR</span></div><span class="go">Abrir laboratorio →</span></a>
   <a class="c met" href="https://cesarisaza-design.github.io/Pulvimetalurgia/"><h3>Metalurgia de polvos</h3><p>Compactación, densidad en verde, sinterización y propiedades finales.</p><div class="t"><span>Compactación</span><span>Sinterizado</span><span>Porosidad</span></div><span class="go">Abrir laboratorio →</span></a>
  </div>
 
@@ -57,13 +76,13 @@ footer{padding:28px 0 40px;color:var(--mut);font-size:.85rem}
  <div class="g">
   <a class="c pol" href="https://cesarisaza-design.github.io/Extrusion-de-polimeros/"><h3>Extrusión de polímeros</h3><p>Tornillo, reología, perfiles de temperatura, microestructura y propiedades del producto.</p><div class="t"><span>Reología</span><span>Tornillo</span><span>Temperaturas</span></div><span class="go">Abrir laboratorio →</span></a>
   <a class="c pol" href="https://cesarisaza-design.github.io/Laboratorio-de-inyeccion/"><h3>Moldeo por inyección</h3><p>Flujo en el molde, fuerza de cierre, presiones, cojín, dosificación, empaque y contracción.</p><div class="t"><span>Llenado</span><span>Cierre</span><span>Empaque</span></div><span class="go">Abrir laboratorio →</span></a>
-  <a class="c pol" href="https://cesarisaza-design.github.io/Lab-termoformado/"><h3>Termoformado de plásticos</h3><p>Calentamiento infrarrojo, caída de la lámina, formado con vacío, presión y tapón, espesor por zonas y enfriamiento.</p><div class="t"><span>Calentamiento</span><span>Espesor</span><span>Vacío</span></div><span class="go">Abrir laboratorio →</span></a>
-  <a class="c pol" href="https://cesarisaza-design.github.io/Lab-materiales-compuestos/"><h3>Materiales compuestos</h3><p>Laminación manual, bolsa de vacío, infusión, RTM y bobinado: llenado de resina, apilado, teoría de laminados y falla de piezas.</p><div class="t"><span>Infusión</span><span>Laminados</span><span>Falla</span></div><span class="go">Abrir laboratorio →</span></a>
+  <a class="c pol" href="https://cesarisaza-design.github.io/Laboratorio-de-materiales-compuestos/"><h3>Materiales compuestos</h3><p>Laminación manual, bolsa de vacío, infusión, RTM y bobinado: llenado de resina, apilado, teoría de laminados y falla de piezas.</p><div class="t"><span>Infusión</span><span>Laminados</span><span>Falla</span></div><span class="go">Abrir laboratorio →</span></a>
+  <a class="c pol" href="https://cesarisaza-design.github.io/Laboratorio-de-termoformado/"><h3>Termoformado de plásticos</h3><p>Calentamiento infrarrojo, caída de la lámina, formado con vacío, presión y tapón, distribución de espesor y defectos.</p><div class="t"><span>Calentamiento</span><span>Espesor</span><span>Vacío</span></div><span class="go">Abrir laboratorio →</span></a>
  </div>
 
- <div class="how">Los laboratorios son guías para el aprendizaje, dimesionamientos requieren análisis detallados.</div>
+ <div class="how">Los modelos son semiempíricos y sirven para entender tendencias y criterios de decisión; no sustituyen el dimensionamiento con datos y normas reales.</div>
 </main>
-<footer>Material didáctico · Manufactura</footer>
+<footer>Universidad de Antioquia · Facultad de Ingeniería · Departamento de Ingeniería Mecánica · Curso Conformación, pregrado en Ingeniería Mecánica</footer>
 </div>
 <script>
 (function(){var r=document.documentElement,k="portal_theme";
